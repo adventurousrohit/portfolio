@@ -48,10 +48,10 @@ canvas {
 
   header {
     background: var(--dark-bg);
-    grid-column: 2 / span 5;
+    grid-column: 2 / span 7;
     font-size: 2.5rem;
     padding: 2rem;
-    margin-bottom: var(--spacing);
+    margin-bottom: 170px;
   }
 
   section {
@@ -60,7 +60,13 @@ canvas {
     background: var(--dark-bg);
     font-size: 1.25rem;
     line-height: 1.5;
-    margin-bottom: var(--spacing);
+    margin-bottom: 130px;
+    transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    /* position:absolute; */
   }
 
   blockquote {
@@ -81,3 +87,93 @@ canvas {
   .left {
     grid-column: 6 / 12;
   }
+
+  #ant{
+
+    text-transform: uppercase;
+   background-image: linear-gradient(
+     -225deg,
+     #231557 0%,
+     #44107a 29%,
+     #ff1361 67%,
+     #fff800 100%
+   );
+   background-size: auto auto;
+   background-clip: border-box;
+   background-size: 200% auto;
+   color: #fff;
+   background-clip: text;
+   /* text-fill-color: transparent; */
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   animation: textclip 2s linear infinite;
+   display: inline-block;
+       font-size: 30px;
+ }
+ 
+ @keyframes textclip {
+   to {
+     background-position: 200% center;
+   }
+ }
+ #htt {
+  position: relative;
+  -webkit-box-reflect: below -15px linear-gradient(transparent, rgba(0,0,0,.2));
+  font-size: 20px; 
+  color: #ffffff7d;
+  left: 4%;
+}
+
+@keyframes htt {
+  0%,40%,100% {
+    transform: translateY(0)
+  }
+  20% {
+    transform: translateY(-20px)
+  }
+}
+
+#img{
+  height: 100px;
+  width: 100px;
+  align-items:start;
+  position:sticky;
+  bottom:0;
+  right: 0;
+  transform: rotate3d(2, -1, -1, -0.2turn);
+  border: 0px;
+  margin: 0px;
+  float: left;
+}
+#img:hover{
+  transform: rotate3d(1, 1, 1, 0deg);
+}
+
+#div{
+  width: 70%;
+}
+
+
+#ant:hover{
+  position: relative;
+  display: inline-block;
+  /* font-size: 40px; */
+  color: #fff;
+  text-transform: uppercase;
+  animation: flip 1s infinite;
+  animation-delay: calc(.2s * var(--i))
+}
+@keyframes flip {
+  0%,80% {
+    transform: rotateY(360deg) 
+  }
+}
+
+
+section:hover{
+  transform: translate(10em,2em);
+  -webkit-transform: translate(3em,0);
+  -moz-transform: translate(3em,0);
+  -o-transform: translate(10em,0);
+  -ms-transform: translate(10em,0);
+}
