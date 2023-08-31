@@ -84,7 +84,7 @@ scene.background = spaceTexture;
 
 const rohitTexture = new THREE.TextureLoader().load('rohitImage.jpg');
 
-const rohit = new THREE.Mesh(new THREE.BoxGeometry(3, 3, 3), new THREE.MeshBasicMaterial({ map: rohitTexture }));
+const rohit = new THREE.Mesh(new THREE.PlaneGeometry(4,4), new THREE.MeshBasicMaterial({ map: rohitTexture }));
 
 scene.add(rohit);
 
@@ -145,3 +145,8 @@ function animate() {
 }
 
 animate();
+
+function initial(){
+  
+}
+setInterval(()=>{},500)
