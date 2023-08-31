@@ -77,12 +77,12 @@ Array(200).fill().forEach(addStar);
 
 // Background
 
-const spaceTexture = new THREE.TextureLoader().load('space.jpg');
+const spaceTexture = new THREE.TextureLoader().load('space.png');
 scene.background = spaceTexture;
 
 // Avatar
 
-const rohitTexture = new THREE.TextureLoader().load('rohitImage.jpg');
+const rohitTexture = new THREE.TextureLoader().load('rohitImage.png');
 
 const rohit = new THREE.Mesh(new THREE.PlaneGeometry(4,4), new THREE.MeshBasicMaterial({ map: rohitTexture }));
 
