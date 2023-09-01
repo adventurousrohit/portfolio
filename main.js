@@ -15,7 +15,7 @@ const sound = new THREE.Audio( listener );
 
 // load a sound and set it as the Audio object's buffer
 const audioLoader = new THREE.AudioLoader();
-audioLoader.load( 'music.mp4', function( buffer ) {
+audioLoader.load( 'assets/music.mp4', function( buffer ) {
 	sound.setBuffer( buffer );
 	sound.setLoop( true );
 	sound.setVolume( 1 );
@@ -77,12 +77,12 @@ Array(200).fill().forEach(addStar);
 
 // Background
 
-const spaceTexture = new THREE.TextureLoader().load('space.png');
+const spaceTexture = new THREE.TextureLoader().load('assets/space.jpg');
 scene.background = spaceTexture;
 
 // Avatar
 
-const rohitTexture = new THREE.TextureLoader().load('rohitImage.png');
+const rohitTexture = new THREE.TextureLoader().load('/assets/rohitImage.jpg');
 
 const rohit = new THREE.Mesh(new THREE.PlaneGeometry(4,4), new THREE.MeshBasicMaterial({ map: rohitTexture }));
 
@@ -90,8 +90,8 @@ scene.add(rohit);
 
 // Moon
 
-const moonTexture = new THREE.TextureLoader().load('moon.jpg');
-const normalTexture = new THREE.TextureLoader().load('normal.jpg');
+const moonTexture = new THREE.TextureLoader().load('assets/moon.jpg');
+const normalTexture = new THREE.TextureLoader().load('assets/normal.jpg');
 
 const moon = new THREE.Mesh(
   new THREE.SphereGeometry(3, 32, 32),
@@ -146,7 +146,4 @@ function animate() {
 
 animate();
 
-function initial(){
-  
-}
-setInterval(()=>{},500)
+
